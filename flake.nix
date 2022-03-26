@@ -12,7 +12,7 @@
       pkgs = import nixpkgs {
         inherit system;
       };
-      mg = (with pkgs; stdenv.mkDerivation {
+      ayu-light-bat = (with pkgs; stdenv.mkDerivation {
         pname = "ayu-light-bat";
         version = "0.1.0";
         src = fetchFromGitHub {
@@ -32,7 +32,7 @@
       defaultApp = flake-utils.lib.mkApp {
         drv = defaultPackage;
       };
-      defaultPackage = mg;
+      defaultPackage = ayu-light-bat;
     }
   );
 }
